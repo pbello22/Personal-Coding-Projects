@@ -1,8 +1,8 @@
 '''
-name: Paul Bello
+Name: Paul Bello
 Project: Make a GUI for weather app 
 Purpose: Make weather app more user friendly and work on interface skills
-date: 11/28/2022
+Date: 11/28/2022
 
 IN PROGRESS!!!!!!
 '''
