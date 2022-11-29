@@ -1,13 +1,14 @@
 '''
 name: Paul Bello
-Project: Make a GUI for weather app 
-Purpose: Make weather app more user friendly and work on interface skills
+Project: Make a GUI for basic weather app (add on from original project)
+Purpose: Make weather app more user friendly, work on interface skills, and more work on using API's and API implementation
 date: 11/28/2022
 
 Project inspired by freeCodeCamp
 The only part of code that was the same as freeCodeCamp is the defining of API_Key, base_url, and weatherData. The rest of the code is my own idea and code.
 
 IN PROGRESS!!!!!!
+working on implementing changing background for each weather report type (rainy, cloudy, sunny, etc).
 '''
 
 from tkinter import *
@@ -18,6 +19,7 @@ import json
 #import tkinter as tk
 
 root = Tk()
+root.title('Current Weather App')
 
 root.geometry("650x1000") 
 
@@ -66,10 +68,11 @@ def Click():
   else:
     clouds = 'Clear'
 
-  pressure = int(weatherData['main']['pressure'])
+  pressure = round(int(weatherData['main']['pressure'])/33.863886666667, 2)
+  weatherDesc = weatherData['weather'][0]['description']
   
   
-  weatherText = f"Temperature (Celsius): {temp}°\nFeels Like (Celsius): {feels_like}°\nCloud status: {clouds}\nHumidity: {humidity}%\nPressure: {pressure}"
+  weatherText = f"Temperature (Celsius): {temp}°\nFeels Like (Celsius): {feels_like}°\nCloud status: {clouds}\nHumidity: {humidity}%\nPressure: {pressure}inHg\nWeather: {weatherDesc}\n"
   textBox.insert(INSERT, weatherText) 
 
 
