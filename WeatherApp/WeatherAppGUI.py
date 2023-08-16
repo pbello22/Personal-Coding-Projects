@@ -1,6 +1,6 @@
 '''
 name: Paul Bello
-Project: Make a GUI for basic weather app (add on from original project)
+Project: Make a GUI for basic weather app (add on from my original project)
 Purpose: Make weather app more user friendly, work on interface skills, and more work on using API's and API implementation
 date: 11/28/2022
 
